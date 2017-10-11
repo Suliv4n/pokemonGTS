@@ -77,7 +77,7 @@ class PokemonGTS {
 	 * @param string $userSaveDataId
 	 * 	The user save data id. If null, it will try to retrieve it when it is needed.
 	 */
-	public function __construct(string $profilId, string $userAccountId=null, string $userSaveDataId=null) {
+	public function __construct(string $profilId, ?string $userAccountId=null, ?string $userSaveDataId=null) {
 		$this->profilId = $profilId;
 		$this->userAccountId = $userAccountId;
 		$this->userSaveDataId = $userSaveDataId;
@@ -114,7 +114,7 @@ class PokemonGTS {
 	 * Get the user save data id.
 	 * @return string The user save data id.
 	 */
-	public function setUserSaveDataId() {
+	public function getUserSaveDataId() {
 		return $this->userSaveDataId;
 	}
 	
@@ -260,7 +260,7 @@ class PokemonGTS {
 	 *
 	 * @return object[] All user trades.
 	 */
-	public function getTradesFromDate($timestamp = null) {
+	public function getAllTrades($timestamp = null) {
 		return $this->getTradesFromDate(0);
 	}
 	
