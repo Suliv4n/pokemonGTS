@@ -269,7 +269,7 @@ class PokemonGTS {
 	 * 
 	 * @param int $languageId
 	 */
-	public static function set_language($languageId)
+	public static function setLanguage($languageId)
 	{
 		self::$LANGUAGE_ID = $languageId;
 	}
